@@ -76,7 +76,7 @@ FROM
 JOIN
     Relationships R
 ON
-    D.dwarf_id = R.related_to
+    D.dwarf_id = R.dwarf_id
 WHERE
     R.relationship IN ('Родитель', 'Ребенок')
 GROUP BY D.name, R.relationship;
